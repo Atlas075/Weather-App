@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
-    <script defer src="./assets/js/script.js"></script>
+    <script defer sr c="./assets/js/script.js"></script>
     
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -30,11 +30,11 @@
         <div id="header" class=" col-lg-3 bg-light d-flex flex-column text-center">
 
             <div>
-                <div class="d-flex flex-column " id="search-menu">
-                    <h2 class="mb-lg-3">Search for a City:</h2>
-                    <textarea class="mb-lg-4" placeholder="Enter a City Name" name="" id="search-box"></textarea>  
-                    <button class="text-warning mb-lg-4" id="search-btn" type="submit">Search</button>
-                </div>
+                <form class="d-flex flex-column"  id="user-form" action="">
+                    <label for="">Search for a City</label>
+                    <input name="city" autofocus="tue" id="city" type="text">
+                    <button type="submit">Find City</button>
+                </form>
 
                 <div id="search-history" class="">
                     <button class="mt-lg-4 bg-secondary" id="prev-city">Prev City</button>
@@ -46,16 +46,16 @@
 
         <main id="main" class="col-lg-9">
             <div >
-                <div  id="current-day" class="">
+                <div class="">
                     <div class="d-flex">
-                        <h2>City</h2>
-                        <h2>Date</h2>
+                        <h2 id="current-city">City</h2>
+                        <h2 id="current-date">Date</h2>
                     </div>
                     <div>
-                        <p>Temp:</p>
-                        <p>Wind:</p>
-                        <p>Humidity:</p>
-                        <p>UV Index: <button id="uv-index">index</button> </p>
+                        <p class="temp">Temp:</p>
+                        <p class="wind">Wind:</p>
+                        <p class="humidity">Humidity:</p>
+                        <p class="uv-index">UV Index: <button id="uv-index">index</button> </p>
                     </div>
 
                 </div>  
@@ -132,4 +132,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 </body>
 
-</html>
+</html>26bf7cdec78804f3934631aa597f6ac7
