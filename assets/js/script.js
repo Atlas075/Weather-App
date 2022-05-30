@@ -17,8 +17,8 @@ var formSubmitHandler = function(event)
 
 var cityEL = cityInputEl.value.trim();
 currentCity.innerHTML = cityEL;
-var oldSearchedCity = localStorage.getItem("city-searched")
-localStorage.setItem("city-searched", oldSearchedCity + ";" + cityEL); 
+var oldSearchedCity = localStorage.getItem("city")
+localStorage.setItem("city", cityEL); 
 
 
 
@@ -31,7 +31,7 @@ if (cityEL)
   getWeather(cityEL);
 }
 
-displaySearchHistory(oldSearchedCity + ";" + cityEL)
+displaySearchHistory(oldSearchedCity)
 };
 
 
