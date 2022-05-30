@@ -9,7 +9,7 @@ var HistoryEl = document.querySelector("#history")
 var uvIndexEl = document.querySelector("#current-uvi")
 var apiKey = "26bf7cdec78804f3934631aa597f6ac7"
 
-
+//displays the current date
 // taking input from from element and placing it in the display area
 var formSubmitHandler = function(event) 
 {
@@ -18,7 +18,7 @@ var formSubmitHandler = function(event)
 var cityEL = cityInputEl.value.trim();
 currentCity.innerHTML = cityEL
 localStorage.setItem("[city-searched1, city-searched2, city-searched3, ]", cityEL)
-
+currentDate.textContent = "(" + moment().format("L") + ")";
 
 
 if (cityEL)
@@ -29,12 +29,6 @@ if (cityEL)
 displaySearchHistory(cityEL)
 };
 
-//displays the current date
-var displayCity = function ()
-{
-    currentDate.textContent = "(" + moment().format("L") + ")";
-    // currentCity.textContent = cityEL
-}
 
 // takes the input given and runs several openweather apis and get fetches the needed data
 var getWeather = function (name)
