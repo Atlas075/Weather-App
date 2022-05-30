@@ -177,13 +177,13 @@ var changeUV = function (currentUvindex)
 //display search history from (cityEl) 
 var displaySearchHistory = function (cityEL, name)
 {
-  var searchArray = [i]
+  var searchArray = cityEL.split(";")
 for (var i = 0; i < searchArray.length; i++)
 {
 
 var searchEL = document.createElement("button")
 searchEL.className = "search-history btn"
-searchEL.textContent = cityEL
+searchEL.textContent = searchArray[i]
 HistoryEl.appendChild(searchEL)
 
 }
