@@ -9,12 +9,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
-    <script defer sr c="./assets/js/script.js"></script>
+    <script defer src="/assets/js/script.js"></script>
     
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
+    <!-- displays the name of the app -->
     <div id="dashbord" class="text-warning">
         <div>
             <div>
@@ -27,89 +28,56 @@
 
     <div class="row min-vh-100 no-gutters">
 
+        <!-- navagation menu for defining search criteria  -->
         <div id="header" class=" col-lg-3 bg-light d-flex flex-column text-center">
-
-            <div>
                 <form class="d-flex flex-column"  id="user-form" action="">
                     <label for="">Search for a City</label>
-                    <input name="city" autofocus="tue" id="city" type="text">
-                    <button type="submit">Find City</button>
+                    <input class="city" name="city" autofocus="tue" id="city" type="text" placeholder="city,state">
+                    <button class="btn" type="submit">Find City</button>
                 </form>
 
-                <div id="search-history" class="">
-                    <button class="mt-lg-4 bg-secondary" id="prev-city">Prev City</button>
+                <h2>Search History:</h2>
+                <div id="history" class="">
+                
                 </div>
-            </div>
-
         </div>
 
 
+        <!-- main section the displays all searched data in current and 5 daya forcast -->
         <main id="main" class="col-lg-9">
             <div >
-                <div class="">
+
+                <!-- current date forcast -->
+                <div class="current">
                     <div class="d-flex">
                         <h2 id="current-city">City</h2>
                         <h2 id="current-date">Date</h2>
+                        <span id="current-icon"></span>
                     </div>
                     <div>
-                        <p class="temp">Temp:</p>
-                        <p class="wind">Wind:</p>
-                        <p class="humidity">Humidity:</p>
-                        <p class="uv-index">UV Index: <button id="uv-index">index</button> </p>
+                        <p class="temp" id="current-temp">Temp:</p>
+                        <p class="wind" id="current-wind">Wind:</p>
+                        <p class="humidity" id="current-humidity">Humidity:</p>
+                        <p class="uv-index" id="current-uvi">UV Index:</p>
                     </div>
 
                 </div>  
 
+                <!-- five day forcast section -->
                     <div>
                         <h4 class="d-flex">Five Day Forcast:</h4>
-                        <div class="d-flex justify-content-around" >
+                        <div class="d-flex justify-content-around" id="future-weather-forcast" >
 
-                            <div id="card-1" class="card text-warning col-2">
+                            <div id="card-1" class=" text-warning col-2 future-title hidden">
                                 <p>Date:</p>
                                 <span>
                                     <i>0</i>
                                 </span>
-                                <p>Temp:</p>
-                                <p>Wind:</p>
-                                <p>Humidity:</p>
+                                <p class="temp">Temp:</p>
+                                <p class="wind">Wind:</p>
+                                <p class="hunidity">Humidity:</p>
                             </div>
-                            <div id="card-2" class="card text-warning col-2">
-                                <p>Date:</p>
-                                <span>
-                                    <i>0</i>
-                                </span>
-                                <p>Temp:</p>
-                                <p>Wind:</p>
-                                <p>Humidity:</p>
-                            </div>
-                            <div id="card-3" class="card text-warning col-2">
-                                <p>Date:</p>
-                                <span>
-                                    <i>0</i>
-                                </span>
-                                <p>Temp:</p>
-                                <p>Wind:</p>
-                                <p>Humidity:</p>
-                            </div>
-                            <div id="card-4" class="card text-warning col-2">
-                                <p>Date:</p>
-                                <span>
-                                    <i>0</i>
-                                </span>
-                                <p>Temp:</p>
-                                <p>Wind:</p>
-                                <p>Humidity:</p>
-                            </div>
-                            <div id="card-5" class="card text-warning col-2">
-                                <p>Date:</p>
-                                <span>
-                                    <i>0</i>
-                                </span>
-                                <p>Temp:</p>
-                                <p>Wind:</p>
-                                <p>Humidity:</p>
-                            </div>
-                            
+                           
 
                         </div>
                         
@@ -129,7 +97,8 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 </body>
 
-</html>26bf7cdec78804f3934631aa597f6ac7
+</html>
