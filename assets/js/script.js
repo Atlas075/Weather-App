@@ -187,14 +187,6 @@ searchEL.className = "search-history btn"
 searchEL.textContent = cityEL
 HistoryEl.appendChild(searchEL)
 
-// document.getElementsByClassName('search-history').addEventListener("submit", function()
-// {
-//  console.log(cityEL) 
-// })
-
-  
-
-
 }
 }
 
