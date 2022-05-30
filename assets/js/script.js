@@ -31,7 +31,7 @@ if (cityEL)
   getWeather(cityEL);
 }
 
-displaySearchHistory(cityEL)
+displaySearchHistory(oldSearchedCity + ";" + cityEL)
 };
 
 
@@ -175,7 +175,7 @@ var changeUV = function (currentUvindex)
 }
 
 //display search history from (cityEl) 
-var displaySearchHistory = function (oldSearchedCity + ";" + cityEL)
+var displaySearchHistory = function (cityEL, name)
 {
   var searchArray = [i]
 for (var i = 0; i < searchArray.length; i++)
