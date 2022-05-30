@@ -17,8 +17,9 @@ var formSubmitHandler = function(event)
 
 var cityEL = cityInputEl.value.trim();
 currentCity.innerHTML = cityEL
-localStorage.setItem("[city-searched1, city-searched2, city-searched3, ]", cityEL)
+localStorage.setItem("city-searched", cityEL)
 currentDate.textContent = "(" + moment().format("L") + ")";
+var searchedCity 
 
 
 if (cityEL)
