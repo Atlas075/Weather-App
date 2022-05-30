@@ -39,7 +39,7 @@ var displayCity = function ()
 // takes the input given and runs several openweather apis and get fetches the needed data
 var getWeather = function (name)
 {
-    var apiUrl ="http://api.openweathermap.org/geo/1.0/direct?q=" + name + ",us&limit=3&appid=" + apiKey
+    var apiUrl ="https://api.openweathermap.org/geo/1.0/direct?q=" + name + ",us&limit=3&appid=" + apiKey
   
     
    // make a get request to url
@@ -178,11 +178,7 @@ var changeUV = function (currentUvindex)
 //display search history from (cityEl) 
 var displaySearchHistory = function (cityEL, name)
 {
-
-
   var searchArray = [i]
-
-
 for (var i = 0; i < searchArray.length; i++)
 {
 
@@ -191,10 +187,10 @@ searchEL.className = "search-history btn"
 searchEL.textContent = cityEL
 HistoryEl.appendChild(searchEL)
 
-document.getElementsByClassName('search-history').addEventListener("submit", function()
-{
- console.log(cityEL) 
-})
+// document.getElementsByClassName('search-history').addEventListener("submit", function()
+// {
+//  console.log(cityEL) 
+// })
 
   
 
