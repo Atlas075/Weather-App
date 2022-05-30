@@ -18,7 +18,7 @@ var formSubmitHandler = function(event)
 var cityEL = cityInputEl.value.trim();
 currentCity.innerHTML = cityEL;
 var oldSearchedCity = localStorage.getItem("city-searched")
-localStorage.setItem("city-searched", oldSearchedCity + cityEL); 
+localStorage.setItem("city-searched", oldSearchedCity + ";" + cityEL); 
 
 
 
@@ -175,7 +175,7 @@ var changeUV = function (currentUvindex)
 }
 
 //display search history from (cityEl) 
-var displaySearchHistory = function (cityEL, name)
+var displaySearchHistory = function (oldSearchedCity + ";" + cityEL)
 {
   var searchArray = [i]
 for (var i = 0; i < searchArray.length; i++)
