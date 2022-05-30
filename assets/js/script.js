@@ -181,7 +181,8 @@ var displaySearchHistory = function (cityEL, name)
 for (var i = 0; i < searchArray.length; i++)
 {
 
-var searchEL = document.createElement("button").onclick(getWeather(searchArray[i]))
+var searchEL = document.createElement("button")
+searchEL.onclick = getWeather(searchArray[i])
 searchEL.className = "search-history btn"
 searchEL.textContent = searchArray[i]
 HistoryEl.appendChild(searchEL)
