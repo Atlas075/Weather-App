@@ -12,3 +12,4 @@ Weather info:
 The user is then allowed to search again when a search history button is clicked
 
 
+![Screenshot 2022-05-29 210007](https://user-images.githubusercontent.com/101908537/170899924-1fb9b959-4e8f-4693-8542-28d0c0097f11.png)
